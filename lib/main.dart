@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,22 +13,28 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
-            // mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            // mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              Container(
-                height: 100.0,
-                // margin: EdgeInsets.all(20.0),
-                color: Colors.white,
-                child: Text("Learning Flutter"),
+              CircleAvatar(
+                radius: 50.0,
+                backgroundColor: Colors.red,
+                backgroundImage: AssetImage('images/me.jpeg'),
               ),
-              SizedBox(height: 20.0),
-              Container(
-                height: 100.0,
-                // margin: EdgeInsets.all(20.0),
-                color: Colors.blueGrey,
-                child: Text("Learning Flutter"),
+              Text(
+                "Aayush Kumar",
+                style: GoogleFonts.pacifico(
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                "FULL STACK DEVELOPER",
+                style: GoogleFonts.sourceSansPro(
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  letterSpacing: .5,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ],
           ),
